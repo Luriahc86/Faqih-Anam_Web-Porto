@@ -363,58 +363,104 @@ function App() {
                 <h3 className="text-xl font-semibold">Programming Languages</h3>
               </div>
               <div className="space-y-3">
-                {['TypeScript', 'JavaScript', 'Python', 'C++', 'HTML', 'CSS', 'Node.js', 'Next.js'].map((skill, index) => (
-                  <div key={skill} className="flex items-center gap-3 group/item" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <ChevronRight className="text-blue-400 group-hover/item:translate-x-1 transition-transform duration-200" size={16} />
-                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{skill}</span>
+                {[
+                  { name: 'TypeScript', icon: FileCode, color: 'blue' },
+                  { name: 'JavaScript', icon: Braces, color: 'yellow' },
+                  { name: 'Python', icon: Terminal, color: 'green' },
+                  { name: 'C++', icon: Cpu, color: 'purple' },
+                  { name: 'HTML', icon: Code2, color: 'orange' },
+                  { name: 'CSS', icon: Palette, color: 'pink' },
+                  { name: 'Node.js', icon: Settings, color: 'green' },
+                  { name: 'Next.js', icon: Layers, color: 'gray' }
+                ].map((skill, index) => (
+                  <div key={skill.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <skill.icon className={`text-${skill.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{skill.name}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Design Tools */}
+            {/* Design & Creative Tools */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 group hover-lift stagger-item animate">
               <div className="flex items-center gap-3 mb-6">
                 <Palette className="text-purple-400 group-hover:scale-110 transition-transform duration-300 animate-wiggle" size={32} />
-                <h3 className="text-xl font-semibold">Design Tools</h3>
+                <h3 className="text-xl font-semibold">Design & Creative Tools</h3>
               </div>
               <div className="space-y-3">
-                {['Figma', 'Canva', 'CapCut'].map((tool, index) => (
-                  <div key={tool} className="flex items-center gap-3 group/item" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <ChevronRight className="text-purple-400 group-hover/item:translate-x-1 transition-transform duration-200" size={16} />
-                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{tool}</span>
+                {[
+                  { name: 'Figma', icon: Figma, color: 'purple' },
+                  { name: 'Canva', icon: Palette, color: 'blue' },
+                  { name: 'CapCut', icon: Video, color: 'red' }
+                ].map((tool, index) => (
+                  <div key={tool.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <tool.icon className={`text-${tool.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{tool.name}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Development Tools */}
+            {/* Development & Version Control */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 group hover-lift stagger-item animate">
               <div className="flex items-center gap-3 mb-6">
                 <GitBranch className="text-green-400 group-hover:scale-110 transition-transform duration-300 animate-pulse" size={32} />
-                <h3 className="text-xl font-semibold">Development Tools</h3>
+                <h3 className="text-xl font-semibold">Development & Version Control</h3>
               </div>
               <div className="space-y-3">
-                {['VS Code', 'GitHub', 'GitLab', 'Draw.io'].map((tool, index) => (
-                  <div key={tool} className="flex items-center gap-3 group/item" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <ChevronRight className="text-green-400 group-hover/item:translate-x-1 transition-transform duration-200" size={16} />
-                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{tool}</span>
+                {[
+                  { name: 'VS Code', icon: Code2, color: 'blue' },
+                  { name: 'GitHub', icon: Github, color: 'gray' },
+                  { name: 'GitLab', icon: GitBranch, color: 'orange' },
+                  { name: 'Draw.io', icon: Workflow, color: 'green' }
+                ].map((tool, index) => (
+                  <div key={tool.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <tool.icon className={`text-${tool.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{tool.name}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Documentation */}
+            {/* Frameworks & Libraries */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 group hover-lift stagger-item animate">
               <div className="flex items-center gap-3 mb-6">
-                <FileText className="text-yellow-400 group-hover:scale-110 transition-transform duration-300 animate-bounce" size={32} />
-                <h3 className="text-xl font-semibold">Documentation</h3>
+                <Package className="text-yellow-400 group-hover:scale-110 transition-transform duration-300 animate-bounce" size={32} />
+                <h3 className="text-xl font-semibold">Frameworks & Libraries</h3>
               </div>
               <div className="space-y-3">
-                {['SRS (Software Requirements Specification)', 'SDD (Software Design Document)', 'ERD (Entity Relationship Diagram)'].map((doc, index) => (
-                  <div key={doc} className="flex items-center gap-3 group/item" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <ChevronRight className="text-yellow-400 group-hover/item:translate-x-1 transition-transform duration-200" size={16} />
-                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{doc}</span>
+                {[
+                  { name: 'React', icon: Layers, color: 'blue' },
+                  { name: 'Tailwind CSS', icon: Palette, color: 'cyan' },
+                  { name: 'Vite', icon: Zap, color: 'yellow' },
+                  { name: 'Express.js', icon: Settings, color: 'green' }
+                ].map((framework, index) => (
+                  <div key={framework.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <framework.icon className={`text-${framework.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{framework.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Documentation & Analysis */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-300 group hover-lift stagger-item animate">
+              <div className="flex items-center gap-3 mb-6">
+                <FileText className="text-indigo-400 group-hover:scale-110 transition-transform duration-300 animate-bounce" size={32} />
+                <h3 className="text-xl font-semibold">Documentation & Analysis</h3>
+              </div>
+              <div className="space-y-3">
+                {[
+                  { name: 'SRS', icon: FileText, color: 'indigo', desc: 'Software Requirements Specification' },
+                  { name: 'SDD', icon: FileCode, color: 'purple', desc: 'Software Design Document' },
+                  { name: 'ERD', icon: Database, color: 'blue', desc: 'Entity Relationship Diagram' }
+                ].map((doc, index) => (
+                  <div key={doc.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <doc.icon className={`text-${doc.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <div className="flex flex-col">
+                      <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200 font-medium">{doc.name}</span>
+                      <span className="text-gray-500 text-xs">{doc.desc}</span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -423,14 +469,19 @@ function App() {
             {/* Specializations */}
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 group md:col-span-2 hover-lift stagger-item animate">
               <div className="flex items-center gap-3 mb-6">
-                <ExternalLink className="text-pink-400 group-hover:scale-110 transition-transform duration-300 animate-spin" size={32} />
+                <Star className="text-pink-400 group-hover:scale-110 transition-transform duration-300 animate-spin" size={32} />
                 <h3 className="text-xl font-semibold">Specializations</h3>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
-                {['Web Design', 'Mobile Apps', 'UI/UX Design', 'Full-Stack Development'].map((spec, index) => (
-                  <div key={spec} className="flex items-center gap-3 group/item" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <ChevronRight className="text-pink-400 group-hover/item:translate-x-1 transition-transform duration-200" size={16} />
-                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{spec}</span>
+                {[
+                  { name: 'Web Design', icon: Monitor, color: 'pink' },
+                  { name: 'Mobile Apps', icon: Smartphone, color: 'blue' },
+                  { name: 'UI/UX Design', icon: Palette, color: 'purple' },
+                  { name: 'Full-Stack Development', icon: Layers, color: 'green' }
+                ].map((spec, index) => (
+                  <div key={spec.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <spec.icon className={`text-${spec.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200 font-medium">{spec.name}</span>
                   </div>
                 ))}
               </div>
