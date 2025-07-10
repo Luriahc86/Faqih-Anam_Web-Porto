@@ -145,12 +145,12 @@ function App() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 animate-gradient"></div>
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-6 mt-16">
           <div className="mb-8 flex justify-center animate-zoom-in">
             <div className="relative">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 via-purple-400 to-green-400 p-1 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 animate-pulse-glow hover-glow">
                 <img 
-                  src="/WhatsApp Image 2025-07-09 at 18.06.55_7c982447.jpg" 
+                  src="/WhatsApp Image 2025-07-09 at 18.06.56_208355fd.jpg" 
                   alt="Faqih Chairul Anam" 
                   className="w-full h-full object-cover rounded-full bg-gray-800 hover:scale-110 transition-transform duration-500"
                 />
