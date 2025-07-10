@@ -139,7 +139,7 @@ function App() {
             <div className="relative">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 via-purple-400 to-green-400 p-1 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 animate-pulse-glow hover-glow">
                 <img 
-                  src="/WhatsApp Image 2025-03-20 at 11.37.25_8423f68c.jpg" 
+                  src="/WhatsApp Image 2025-07-09 at 18.06.55_7c982447.jpg" 
                   alt="Faqih Chairul Anam" 
                   className="w-full h-full object-cover rounded-full bg-gray-800 hover:scale-110 transition-transform duration-500"
                 />
