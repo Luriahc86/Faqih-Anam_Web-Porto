@@ -123,7 +123,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="text-xl font-bold gradient-text animate-bounce-in">
-              Faqih Chairul Anam
+              Luriahc
             </div>
             <div className="hidden md:flex space-x-8">
               {['About', 'Education', 'Skills', 'Contact'].map((item, index) => (
