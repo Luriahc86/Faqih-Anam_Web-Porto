@@ -23,7 +23,18 @@ import {
   Zap,
   Heart,
   Rocket,
-  Globe
+  Globe,
+  Terminal,
+  Layers,
+  Smartphone,
+  Monitor,
+  Cpu,
+  Settings,
+  Braces,
+  FileCode,
+  Package,
+  Cloud,
+  Workflow
 } from 'lucide-react';
 
 function App() {
