@@ -148,14 +148,13 @@ function App() {
         <div className="relative z-10 text-center px-6 mt-16">
           <div className="mb-8 flex justify-center animate-zoom-in">
             <div className="relative">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 via-purple-400 to-green-400 p-1 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 animate-pulse-glow hover-glow">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 via-purple-400 to-green-400 p-1 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 profile-3d">
                 <img 
                   src="/WhatsApp Image 2025-07-09 at 18.06.55_afe6435b.jpg" 
                   alt="Faqih Chairul Anam" 
-                  className="w-full h-full object-cover rounded-full bg-gray-800 hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover rounded-full bg-gray-800 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 rounded-full blur opacity-30 animate-pulse"></div>
             </div>
           </div>
           <div className="mb-8">
@@ -201,20 +200,22 @@ function App() {
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover-lift stagger-item animate">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-3d holographic stagger-item animate relative overflow-hidden">
+                <div className="morphing-shape" style={{ top: '10px', right: '10px' }}></div>
                 <div className="flex items-center gap-3 mb-4">
-                  <User className="text-blue-400 animate-bounce" size={24} />
-                  <h3 className="text-xl font-semibold">Background</h3>
+                  <User className="text-blue-400 icon-3d" size={24} />
+                  <h3 className="text-xl font-semibold text-3d">Background</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   I'm a passionate software developer and web designer currently studying Informatika at Institut Teknologi Kalimantan. 
                   I love creating digital experiences that are both beautiful and functional.
                 </p>
               </div>
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover-lift stagger-item animate">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 card-3d holographic stagger-item animate relative overflow-hidden">
+                <div className="morphing-shape" style={{ bottom: '10px', left: '10px' }}></div>
                 <div className="flex items-center gap-3 mb-4">
-                  <Code2 className="text-purple-400 animate-wiggle" size={24} />
-                  <h3 className="text-xl font-semibold">Expertise</h3>
+                  <Code2 className="text-purple-400 icon-3d" size={24} />
+                  <h3 className="text-xl font-semibold text-3d">Expertise</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
                   Specializing in web development, UI/UX design, and full-stack applications. 
@@ -223,26 +224,27 @@ function App() {
               </div>
             </div>
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20 hover-glow stagger-item animate">
-                <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                  <Star className="text-yellow-400 animate-spin" size={20} />
+              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20 card-3d holographic stagger-item animate relative overflow-hidden">
+                <div className="morphing-shape" style={{ top: '20px', left: '50%', transform: 'translateX(-50%)' }}></div>
+                <h3 className="text-xl font-semibold mb-6 flex items-center gap-2 text-3d">
+                  <Star className="text-yellow-400 icon-3d floating-3d" size={20} />
                   Quick Facts
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 hover-bounce">
-                    <MapPin className="text-blue-400" size={20} />
+                    <MapPin className="text-blue-400 icon-3d" size={20} />
                     <span className="text-gray-300">Kalimantan, Indonesia</span>
                   </div>
                   <div className="flex items-center gap-3 hover-bounce">
-                    <GraduationCap className="text-purple-400" size={20} />
+                    <GraduationCap className="text-purple-400 icon-3d" size={20} />
                     <span className="text-gray-300">Institut Teknologi Kalimantan</span>
                   </div>
                   <div className="flex items-center gap-3 hover-bounce">
-                    <Code2 className="text-green-400" size={20} />
+                    <Code2 className="text-green-400 icon-3d" size={20} />
                     <span className="text-gray-300">Full-Stack Developer</span>
                   </div>
                   <div className="flex items-center gap-3 hover-bounce">
-                    <Palette className="text-pink-400" size={20} />
+                    <Palette className="text-pink-400 icon-3d" size={20} />
                     <span className="text-gray-300">UI/UX Designer</span>
                   </div>
                 </div>
@@ -265,19 +267,20 @@ function App() {
             <div className="w-20 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full animate-pulse"></div>
           </div>
           <div className="relative">
-            <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-500 to-blue-500 animate-pulse"></div>
+            <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-1 timeline-connector-3d"></div>
             <div className="space-y-12">
               {/* Current Education */}
-              <div className="relative flex items-center stagger-item animate">
-                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center animate-pulse-glow">
-                  <GraduationCap size={16} className="text-white" />
+              <div className="relative flex items-center timeline-item-3d stagger-item animate">
+                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center animate-pulse-glow card-3d">
+                  <GraduationCap size={20} className="text-white icon-3d" />
                 </div>
                 <div className="ml-16 md:ml-0 md:w-1/2 md:pr-8">
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover-lift">
-                    <h3 className="text-xl font-semibold text-green-400 mb-2">Institut Teknologi Kalimantan</h3>
+                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 card-3d holographic relative overflow-hidden">
+                    <div className="morphing-shape" style={{ top: '5px', right: '5px', width: '50px', height: '50px' }}></div>
+                    <h3 className="text-xl font-semibold text-green-400 mb-2 text-3d">Institut Teknologi Kalimantan</h3>
                     <p className="text-gray-300 mb-2">Program Studi Informatika</p>
                     <p className="text-gray-400 text-sm flex items-center gap-2">
-                      <Calendar size={16} />
+                      <Calendar size={16} className="icon-3d" />
                       Current
                     </p>
                   </div>
@@ -285,16 +288,17 @@ function App() {
               </div>
 
               {/* High School */}
-              <div className="relative flex items-center stagger-item animate">
-                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-pulse-glow">
-                  <GraduationCap size={16} className="text-white" />
+              <div className="relative flex items-center timeline-item-3d stagger-item animate">
+                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center animate-pulse-glow card-3d">
+                  <GraduationCap size={20} className="text-white icon-3d" />
                 </div>
                 <div className="ml-16 md:ml-0 md:w-1/2 md:pl-8 md:ml-auto">
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover-lift">
-                    <h3 className="text-xl font-semibold text-blue-400 mb-2">SMAN 2 PPU</h3>
+                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 card-3d holographic relative overflow-hidden">
+                    <div className="morphing-shape" style={{ bottom: '5px', left: '5px', width: '50px', height: '50px' }}></div>
+                    <h3 className="text-xl font-semibold text-blue-400 mb-2 text-3d">SMAN 2 PPU</h3>
                     <p className="text-gray-300 mb-2">Sekolah Menengah Atas</p>
                     <p className="text-gray-400 text-sm flex items-center gap-2">
-                      <Calendar size={16} />
+                      <Calendar size={16} className="icon-3d" />
                       Completed
                     </p>
                   </div>
@@ -302,16 +306,17 @@ function App() {
               </div>
 
               {/* Junior High School */}
-              <div className="relative flex items-center stagger-item animate">
-                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-pulse-glow">
-                  <GraduationCap size={16} className="text-white" />
+              <div className="relative flex items-center timeline-item-3d stagger-item animate">
+                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center animate-pulse-glow card-3d">
+                  <GraduationCap size={20} className="text-white icon-3d" />
                 </div>
                 <div className="ml-16 md:ml-0 md:w-1/2 md:pr-8">
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover-lift">
-                    <h3 className="text-xl font-semibold text-purple-400 mb-2">SMPN 13 PPU</h3>
+                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 card-3d holographic relative overflow-hidden">
+                    <div className="morphing-shape" style={{ top: '5px', right: '5px', width: '50px', height: '50px' }}></div>
+                    <h3 className="text-xl font-semibold text-purple-400 mb-2 text-3d">SMPN 13 PPU</h3>
                     <p className="text-gray-300 mb-2">Sekolah Menengah Pertama</p>
                     <p className="text-gray-400 text-sm flex items-center gap-2">
-                      <Calendar size={16} />
+                      <Calendar size={16} className="icon-3d" />
                       Completed
                     </p>
                   </div>
@@ -319,16 +324,17 @@ function App() {
               </div>
 
               {/* Elementary School */}
-              <div className="relative flex items-center stagger-item animate">
-                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center animate-pulse-glow">
-                  <GraduationCap size={16} className="text-white" />
+              <div className="relative flex items-center timeline-item-3d stagger-item animate">
+                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center animate-pulse-glow card-3d">
+                  <GraduationCap size={20} className="text-white icon-3d" />
                 </div>
                 <div className="ml-16 md:ml-0 md:w-1/2 md:pl-8 md:ml-auto">
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 hover-lift">
-                    <h3 className="text-xl font-semibold text-pink-400 mb-2">SD 004 Waru</h3>
+                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 card-3d holographic relative overflow-hidden">
+                    <div className="morphing-shape" style={{ bottom: '5px', left: '5px', width: '50px', height: '50px' }}></div>
+                    <h3 className="text-xl font-semibold text-pink-400 mb-2 text-3d">SD 004 Waru</h3>
                     <p className="text-gray-300 mb-2">Sekolah Dasar</p>
                     <p className="text-gray-400 text-sm flex items-center gap-2">
-                      <Calendar size={16} />
+                      <Calendar size={16} className="icon-3d" />
                       Completed
                     </p>
                   </div>
@@ -354,10 +360,11 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Programming Languages */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group hover-lift stagger-item animate">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 group skill-card-3d holographic stagger-item animate relative overflow-hidden">
+              <div className="morphing-shape" style={{ top: '10px', right: '10px', width: '60px', height: '60px' }}></div>
               <div className="flex items-center gap-3 mb-6">
-                <Code2 className="text-blue-400 group-hover:scale-110 transition-transform duration-300 animate-bounce" size={32} />
-                <h3 className="text-xl font-semibold">Programming Languages</h3>
+                <Code2 className="text-blue-400 icon-3d floating-3d" size={32} />
+                <h3 className="text-xl font-semibold text-3d">Programming Languages</h3>
               </div>
               <div className="space-y-3">
                 {[
@@ -371,7 +378,7 @@ function App() {
                   { name: 'Next.js', icon: Layers, color: 'gray' }
                 ].map((skill, index) => (
                   <div key={skill.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <skill.icon className={`text-${skill.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <skill.icon className={`text-${skill.color}-400 icon-3d`} size={20} />
                     <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{skill.name}</span>
                   </div>
                 ))}
@@ -379,10 +386,11 @@ function App() {
             </div>
 
             {/* Design & Creative Tools */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 group hover-lift stagger-item animate">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 group skill-card-3d holographic stagger-item animate relative overflow-hidden">
+              <div className="morphing-shape" style={{ bottom: '10px', left: '10px', width: '60px', height: '60px' }}></div>
               <div className="flex items-center gap-3 mb-6">
-                <Palette className="text-purple-400 group-hover:scale-110 transition-transform duration-300 animate-wiggle" size={32} />
-                <h3 className="text-xl font-semibold">Design & Creative Tools</h3>
+                <Palette className="text-purple-400 icon-3d floating-3d" size={32} />
+                <h3 className="text-xl font-semibold text-3d">Design & Creative Tools</h3>
               </div>
               <div className="space-y-3">
                 {[
@@ -391,7 +399,7 @@ function App() {
                   { name: 'CapCut', icon: Video, color: 'red' }
                 ].map((tool, index) => (
                   <div key={tool.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <tool.icon className={`text-${tool.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <tool.icon className={`text-${tool.color}-400 icon-3d`} size={20} />
                     <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{tool.name}</span>
                   </div>
                 ))}
@@ -399,10 +407,11 @@ function App() {
             </div>
 
             {/* Development & Version Control */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 group hover-lift stagger-item animate">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 group skill-card-3d holographic stagger-item animate relative overflow-hidden">
+              <div className="morphing-shape" style={{ top: '50%', right: '10px', transform: 'translateY(-50%)', width: '60px', height: '60px' }}></div>
               <div className="flex items-center gap-3 mb-6">
-                <GitBranch className="text-green-400 group-hover:scale-110 transition-transform duration-300 animate-pulse" size={32} />
-                <h3 className="text-xl font-semibold">Development & Version Control</h3>
+                <GitBranch className="text-green-400 icon-3d floating-3d" size={32} />
+                <h3 className="text-xl font-semibold text-3d">Development & Version Control</h3>
               </div>
               <div className="space-y-3">
                 {[
@@ -412,7 +421,7 @@ function App() {
                   { name: 'Draw.io', icon: Workflow, color: 'green' }
                 ].map((tool, index) => (
                   <div key={tool.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <tool.icon className={`text-${tool.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <tool.icon className={`text-${tool.color}-400 icon-3d`} size={20} />
                     <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{tool.name}</span>
                   </div>
                 ))}
@@ -420,10 +429,11 @@ function App() {
             </div>
 
             {/* Frameworks & Libraries */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 group hover-lift stagger-item animate">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-300 group skill-card-3d holographic stagger-item animate relative overflow-hidden">
+              <div className="morphing-shape" style={{ bottom: '10px', right: '10px', width: '60px', height: '60px' }}></div>
               <div className="flex items-center gap-3 mb-6">
-                <Package className="text-yellow-400 group-hover:scale-110 transition-transform duration-300 animate-bounce" size={32} />
-                <h3 className="text-xl font-semibold">Frameworks & Libraries</h3>
+                <Package className="text-yellow-400 icon-3d floating-3d" size={32} />
+                <h3 className="text-xl font-semibold text-3d">Frameworks & Libraries</h3>
               </div>
               <div className="space-y-3">
                 {[
@@ -433,7 +443,7 @@ function App() {
                   { name: 'Express.js', icon: Settings, color: 'green' }
                 ].map((framework, index) => (
                   <div key={framework.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <framework.icon className={`text-${framework.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <framework.icon className={`text-${framework.color}-400 icon-3d`} size={20} />
                     <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200">{framework.name}</span>
                   </div>
                 ))}
@@ -441,10 +451,11 @@ function App() {
             </div>
 
             {/* Documentation & Analysis */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-300 group hover-lift stagger-item animate">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-300 group skill-card-3d holographic stagger-item animate relative overflow-hidden">
+              <div className="morphing-shape" style={{ top: '10px', left: '10px', width: '60px', height: '60px' }}></div>
               <div className="flex items-center gap-3 mb-6">
-                <FileText className="text-indigo-400 group-hover:scale-110 transition-transform duration-300 animate-bounce" size={32} />
-                <h3 className="text-xl font-semibold">Documentation & Analysis</h3>
+                <FileText className="text-indigo-400 icon-3d floating-3d" size={32} />
+                <h3 className="text-xl font-semibold text-3d">Documentation & Analysis</h3>
               </div>
               <div className="space-y-3">
                 {[
@@ -453,7 +464,7 @@ function App() {
                   { name: 'ERD', icon: Database, color: 'blue', desc: 'Entity Relationship Diagram' }
                 ].map((doc, index) => (
                   <div key={doc.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-2 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <doc.icon className={`text-${doc.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <doc.icon className={`text-${doc.color}-400 icon-3d`} size={20} />
                     <div className="flex flex-col">
                       <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200 font-medium">{doc.name}</span>
                       <span className="text-gray-500 text-xs">{doc.desc}</span>
@@ -464,10 +475,11 @@ function App() {
             </div>
 
             {/* Specializations */}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 group md:col-span-2 hover-lift stagger-item animate">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 group md:col-span-2 skill-card-3d holographic stagger-item animate relative overflow-hidden">
+              <div className="morphing-shape" style={{ top: '20px', left: '50%', transform: 'translateX(-50%)', width: '80px', height: '80px' }}></div>
               <div className="flex items-center gap-3 mb-6">
-                <Star className="text-pink-400 group-hover:scale-110 transition-transform duration-300 animate-spin" size={32} />
-                <h3 className="text-xl font-semibold">Specializations</h3>
+                <Star className="text-pink-400 icon-3d floating-3d" size={32} />
+                <h3 className="text-xl font-semibold text-3d">Specializations</h3>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
@@ -477,7 +489,7 @@ function App() {
                   { name: 'Full-Stack Development', icon: Layers, color: 'green' }
                 ].map((spec, index) => (
                   <div key={spec.name} className="flex items-center gap-3 group/item hover:bg-gray-700/30 p-3 rounded-lg transition-all duration-200" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <spec.icon className={`text-${spec.color}-400 group-hover/item:scale-110 transition-transform duration-200`} size={20} />
+                    <spec.icon className={`text-${spec.color}-400 icon-3d`} size={20} />
                     <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200 font-medium">{spec.name}</span>
                   </div>
                 ))}
