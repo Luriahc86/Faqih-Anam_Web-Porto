@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense, lazy } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { 
   Code2, 
@@ -35,16 +35,27 @@ import {
   FileCode,
   Package,
   Cloud,
-  Workflow
+  Workflow,
+  Award,
+  Users,
+  Send,
+  Menu,
+  X,
+  Home,
+  FolderOpen,
+  Sun,
+  Moon
 } from 'lucide-react';
 
-// Lazy load components
-const Navigation = lazy(() => import('./components/Navigation'));
-const ProjectsSection = lazy(() => import('./components/ProjectsSection'));
-const ContactForm = lazy(() => import('./components/ContactForm'));
-const SEOHead = lazy(() => import('./components/SEOHead'));
-const LoadingSpinner = lazy(() => import('./components/LoadingSpinner'));
-const ErrorBoundary = lazy(() => import('./components/ErrorBoundary'));
+// Import components
+import Navigation from './components/Navigation';
+import ProjectsSection from './components/ProjectsSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import BlogSection from './components/BlogSection';
+import ContactForm from './components/ContactForm';
+import SEOHead from './components/SEOHead';
+import LoadingSpinner from './components/LoadingSpinner';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Hooks
 import { useDarkMode } from './hooks/useDarkMode';
@@ -144,9 +155,7 @@ function App() {
             ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white' 
             : 'bg-gradient-to-br from-gray-100 via-white to-gray-100 text-gray-900'
         } relative overflow-hidden`}>
-          <Suspense fallback={<LoadingSpinner />}>
-            <SEOHead />
-          </Suspense>
+          <SEOHead />
 
           {/* Animated Background Elements */}
           <div className="fixed inset-0 pointer-events-none z-0">
@@ -174,9 +183,7 @@ function App() {
           <div className="fixed inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-green-600/10 animate-gradient pointer-events-none z-0"></div>
 
           {/* Navigation */}
-          <Suspense fallback={null}>
-            <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-          </Suspense>
+          <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
           {/* Hero Section */}
           <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -186,7 +193,7 @@ function App() {
                 <div className="relative">
                   <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 via-purple-400 to-green-400 p-1 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 profile-3d">
                     <img 
-                      src="/WhatsApp Image 2025-07-09 at 18.06.55_afe6435b.jpg" 
+                      src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400" 
                       alt="Faqih Chairul Anam" 
                       className="w-full h-full object-cover rounded-full bg-gray-800 transition-transform duration-500"
                       loading="eager"
@@ -515,13 +522,13 @@ function App() {
                 </div>
 
                 {/* Specializations */}
-                <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 group md:col-span-2 skill-card-3d holographic stagger-item animate relative overflow-hidden">
+                <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 group md:col-span-2 lg:col-span-1 skill-card-3d holographic stagger-item animate relative overflow-hidden">
                   <div className="morphing-shape" style={{ top: '20px', left: '50%', transform: 'translateX(-50%)', width: '80px', height: '80px' }}></div>
                   <div className="flex items-center gap-3 mb-6">
                     <Star className="text-pink-400 icon-3d floating-3d" size={32} />
                     <h3 className="text-xl font-semibold text-3d">Specializations</h3>
                   </div>
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-4">
                     {[
                       { name: 'Web Design', icon: Monitor, color: 'pink' },
                       { name: 'Mobile Apps', icon: Smartphone, color: 'blue' },
@@ -540,9 +547,13 @@ function App() {
           </section>
 
           {/* Projects Section */}
-          <Suspense fallback={<LoadingSpinner />}>
-            <ProjectsSection />
-          </Suspense>
+          <ProjectsSection />
+
+          {/* Testimonials Section */}
+          <TestimonialsSection />
+
+          {/* Blog Section */}
+          <BlogSection />
 
           {/* Contact Section */}
           <section 
@@ -600,9 +611,7 @@ function App() {
                     <Sparkles className="text-green-400 animate-spin" size={24} />
                     Send a Message
                   </h3>
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <ContactForm />
-                  </Suspense>
+                  <ContactForm />
                 </div>
               </div>
             </div>

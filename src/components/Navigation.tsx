@@ -30,6 +30,8 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
     { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'skills', label: 'Skills', icon: Code2 },
     { id: 'projects', label: 'Projects', icon: FolderOpen },
+    { id: 'testimonials', label: 'Testimonials', icon: User },
+    { id: 'blog', label: 'Blog', icon: FolderOpen },
     { id: 'contact', label: 'Contact', icon: Mail },
   ];
 
